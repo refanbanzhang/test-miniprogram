@@ -12,5 +12,11 @@ describe('index页面测试', () => {
     // const title = await page.$('.title')
     // expect(await title.text()).toBe('index')
   })
+
+  it('点击按钮应该跳转到logs页面', async () => {
+    await page.callMethod('onClick')
+    await page.waitFor(500)
+    expect((await miniProgram.currentPage()).path).toBe('pages/logs/index')
+  })
 })
 

@@ -1,3 +1,4 @@
 module.exports = async () => {
-  await miniProgram.close()
+  await globalThis.miniProgram.close()
+  globalThis.miniProgram = null
 }
