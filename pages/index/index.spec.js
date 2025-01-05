@@ -2,7 +2,7 @@ describe('index页面测试', () => {
   let page = null
 
   beforeAll(async () => {
-    page = await global.__miniProgram__.reLaunch('/pages/index/index')
+    page = await miniProgram.reLaunch('/pages/index/index')
     await page.waitFor(500)
   }, 10000)
 
